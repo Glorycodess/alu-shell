@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Loop through each file in the current directory
+for file in *; do
+    # Skip hidden files and directories
+    if [[ $file == .* || -d $file ]]; then
+        continue
+    fi
+    
+    # Extract the part of the filename after the first dash
+    part_name="${file#*-}"
+    
+    # Display the extracted part
+    echo "$part_name"
+done
