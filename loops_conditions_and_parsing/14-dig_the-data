@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Path to the Apache log file
+logfile="apache-access.log"
+
+# Use awk to group visitors by IP and HTTP status code, count occurrences,
+# and sort the data by occurrence number in descending order
+awk '{print $1, $9}' "$logfile" | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}' | head -n 10
