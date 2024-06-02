@@ -1,5 +1,4 @@
 #!/usr/bin/bash
-
 # Initialize the counter
 counter=1
 
