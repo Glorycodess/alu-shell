@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Initialize the hour counter
+hour=0
+
+# Loop for each hour from 0 to 12
+while [ $hour -le 12 ]
+do
+    # Display the current hour
+    echo "Hour: $hour"
+    
+    # Initialize the minute counter
+    minute=1
+
+    # Loop for each minute from 1 to 59
+    while [ $minute -le 59 ]
+    do
+        # Display the current minute
+        echo "$minute"
+
+        # Increment the minute counter
+        minute=$((minute + 1))
+    done
+
+    # Increment the hour counter
+    hour=$((hour + 1))
+done
